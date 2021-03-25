@@ -1,0 +1,98 @@
+     A*%%TS  SD  20200529  101607  PITC109     REL-V7R3M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03 'EXIT')
+     A                                      CA09(09 'ADD')
+     A          R SFLDATA                   SFL
+     A*%%TS  SD  20200528  164157  PITC109     REL-V7R3M0  5770-WDS
+     A            USERID    R        O  8 10REFFLD(USRFMT/USERID DJDHAWAN/USERS)
+     A            FIRSTNAME R        O  8 19REFFLD(USRFMT/FIRSTNAME DJDHAWAN/US-
+     A                                      ERS)
+     A            AGE       R        O  8 41REFFLD(USRFMT/AGE DJDHAWAN/USERS)
+     A            LASTNAME  R        O  8 48REFFLD(USRFMT/LASTNAME DJDHAWAN/USE-
+     A                                      RS)
+     A            OPTION         1   I  8  4COMP(EQ 'C')
+     A          R SFLCTL                    SFLCTL(SFLDATA)
+     A*%%TS  SD  20200528  164157  PITC109     REL-V7R3M0  5770-WDS
+     A                                      ALTNAME('Y')
+     A                                      SFLSIZ(0100)
+     A                                      SFLPAG(0010)
+     A                                      TEXT('Y')
+     A                                      OVERLAY
+     A  50                                  SFLDSP
+     A  50                                  SFLDSPCTL
+     A N50                                  SFLCLR
+     A  50                                  SFLEND(*MORE)
+     A                                  2  3DATE
+     A                                      EDTCDE(Y)
+     A                                  3  3TIME
+     A                                  2 66USER
+     A                                  2 30'User Management Screen'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  7 10'Userid'
+     A                                      DSPATR(HI)
+     A                                  7 22'First name'
+     A                                      DSPATR(HI)
+     A                                  7 41'Age'
+     A                                      DSPATR(HI)
+     A                                  7 52'Last name'
+     A                                      DSPATR(HI)
+     A                                  7  3'OPT'
+     A                                      DSPATR(HI)
+     A                                      COLOR(WHT)
+     A          R FOOTER
+     A*%%TS  SD  20200528  103421  PITC109     REL-V7R3M0  5770-WDS
+     A                                      OVERLAY
+     A                                 22 19'F3 = exit'
+     A                                 22 34'F9 = Add'
+     A          R ADDREC
+     A*%%TS  SD  20200528  112236  PITC109     REL-V7R3M0  5770-WDS
+     A                                      CA12(12 'BACK')
+     A                                      OVERLAY
+     A                                      WINDOW(4 16 15 45)
+     A                                      WDWBORDER((*COLOR BLU) (*CHAR '#-#|-
+     A                                      |#-#'))
+     A                                  1 20'Add User'
+     A                                      DSPATR(HI)
+     A                                      COLOR(WHT)
+     A                                      DSPATR(UL)
+     A                                  6  6'First name...:'
+     A                                  8  6'Last name....:'
+     A                                 10  6'Age..........:'
+     A                                  4  6'Userid.......:'
+     A                                 14  7'Enter = Add'
+     A            USERID    R        I  4 21REFFLD(USRFMT/USERID DJDHAWAN/USERS)
+     A            FIRSTNAME R        I  6 21REFFLD(USRFMT/FIRSTNAME DJDHAWAN/US-
+     A                                      ERS)
+     A            LASTNAME  R        I  8 21REFFLD(USRFMT/LASTNAME DJDHAWAN/USE-
+     A                                      RS)
+     A            AGE       R        I 10 21REFFLD(USRFMT/AGE DJDHAWAN/USERS)
+     A            FLD001        35A  O 12  6DSPATR(BL)
+     A                                      COLOR(RED)
+     A                                 14 25'F12 = Back'
+     A          R UPDREC
+     A*%%TS  SD  20200529  101607  PITC109     REL-V7R3M0  5770-WDS
+     A                                      WINDOW(4 16 15 45)
+     A                                      CA12(12 'BACK')
+     A                                      OVERLAY
+     A                                      WDWBORDER((*COLOR BLU) (*CHAR '#-#|-
+     A                                      |#-#'))
+     A                                  6  6'First name...:'
+     A                                  8  6'Last name....:'
+     A                                 10  6'Age..........:'
+     A                                  4  6'Userid.......:'
+     A            FLD001        35A  O 12  6DSPATR(BL)
+     A                                      COLOR(RED)
+     A                                 14 25'F12 = Back'
+     A                                  1 18'Update User'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                 14  6'Enter = Update'
+     A            FIRSTNAME R        B  6 21REFFLD(USRFMT/FIRSTNAME DJDHAWAN/US-
+     A                                      ERS)
+     A            LASTNAME  R        B  8 21REFFLD(USRFMT/LASTNAME DJDHAWAN/USE-
+     A                                      RS)
+     A            AGE       R        B 10 21REFFLD(USRFMT/AGE DJDHAWAN/USERS)
+     A            USERID    R        O  4 21REFFLD(USRFMT/USERID DJDHAWAN/USERS)

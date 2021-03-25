@@ -1,0 +1,6 @@
+                R USRFMT
+                  USERID         5S 0
+                  FIRSTNAME     20A
+                  LASTNAME      20A
+                  AGE            3S 0
+                K USERID
