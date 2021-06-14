@@ -1,7 +1,0 @@
-H                                                                    
-D NAME            S             10A                                  
- /free                                                               
-     NAME = 'DHEERAJ';                                               
-     DSPLY ('Hello world...||' + NAME);                              
- /end-free                                                           
-C                   SETON                                        LR  
