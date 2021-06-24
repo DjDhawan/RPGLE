@@ -17,6 +17,7 @@
      PconvertNumericCurrencyToWords...                          
      P                 B                                        
      DconvertNumericCurrencyToWords...                          
+     D                 PI          5000A        
      D currency                      15  0                
                                                           
      D cur             S             15                   
